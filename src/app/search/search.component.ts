@@ -30,8 +30,6 @@ export class SearchComponent {
       return;
     }
 
-    console.log('Searching for:', this.searchControl.value);
-
     this.products = await firstValueFrom(
       this.apiService.searchProducts(this.searchControl.value)
     );

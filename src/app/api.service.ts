@@ -26,7 +26,6 @@ export class ApiService {
         return response.products;
       }),
       catchError((error: any) => {
-        console.error('Error fetching products:', error);
         throw error;
       })
     );
