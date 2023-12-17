@@ -1,0 +1,19 @@
+<div class="rounded-lg border shadow-sm bg-gray-800 text-white w-[250px] m-2">
+  <div class="flex-col space-y-1.5 p-6 flex items-center">
+    <h2 class="ellipsis text-lg font-semibold max-w-full">
+      {{ product.product_name }}
+    </h2>
+  </div>
+  <div class="p-6">
+    <img
+      src="{{ product.image_url }}"
+      class="h-40 rounded-lg object-cover m-auto"
+      style="aspect-ratio: 200 / 200; object-fit: cover"
+    />
+    <a
+      class="w-full mt-4 inline-flex justify-center items-center font-semibold text-blue-400 hover:text-blue-300"
+      href="/product/{{ product.id }}"
+      >View Nutrition Facts</a
+    >
+  </div>
+</div>

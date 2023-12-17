@@ -1,0 +1,22 @@
+<main
+  class="container px-4 sm:px-6 lg:px-8 py-4 bg-gray-900 text-white w-screen min-h-screen"
+>
+  @if (authService.isUserConnected()) {
+  <nav class="flex justify-between mb-5">
+    @for (item of navItems; track $index) {
+    <a
+      [routerLink]="item.link"
+      routerLinkActive="text-blue-500"
+      class="text-white hover:text-blue-500 font-bold text-2xl transition-all"
+      (click)="item.onClick?.()"
+    >
+      {{ item.name }}
+    </a>
+    }
+  </nav>
+  }
+
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</main>

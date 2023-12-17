@@ -1,0 +1,12 @@
+<input
+  class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm flex-grow bg-gray-800 text-white mb-4"
+  placeholder="Search History"
+  type="text"
+  [formControl]="searchControl"
+/>
+
+<div class="w-full flex flex-col items-center">
+  @for (item of (products ); track item.id) {
+  <app-card [product]="item"></app-card>
+  }
+</div>

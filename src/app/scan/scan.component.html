@@ -1,0 +1,20 @@
+<barcode-scanner-livestream
+  [type]="['ean']"
+  (valueChanges)="onChange($event)"
+></barcode-scanner-livestream>
+
+<div class="w-full flex justify-between mt-4">
+  <input
+    class="flex h-10 w-9/12 mr-8 rounded-md border border-input px-3 py-2 text-sm flex-grow bg-gray-800 text-white mb-4"
+    placeholder="Manual bar code entry"
+    type="text"
+    [formControl]="barcodeControl"
+  />
+
+  <button
+    class="flex items-center justify-center h-10 rounded-md border border-input px-3 py-2 text-sm flex-grow bg-gray-800 text-white mb-4"
+    (click)="onSubmit()"
+  >
+    Submit
+  </button>
+</div>
